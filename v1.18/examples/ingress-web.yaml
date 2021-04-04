@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: web-nginx
+#  namespace: default
+spec:
+  rules:
+  - host: web-nginx
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: web-nginx
+          servicePort: 80
