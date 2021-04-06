@@ -4,11 +4,16 @@ metadata:
   name: web-nginx
 #  namespace: default
 spec:
+#  tls:
+#  - hosts:
+#    - www.web-nginx.com
+#    secretName: web-nginx-secret
   rules:
-  - host: web-nginx
+  - host: www.web-nginx.com
     http:
       paths:
       - path: /
         backend:
           serviceName: web-nginx
           servicePort: 80
+
